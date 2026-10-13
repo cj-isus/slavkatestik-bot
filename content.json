@@ -1,19 +1,119 @@
 {
-  "bot_name": "Работа и заработок",
-  "welcome_text": "Привет! 👋\n\nЭто бот с подборкой рабочих мест и способов заработка. Выбирай раздел ниже.",
-  "help_text": "Используй кнопки меню для навигации.\n/start — главное меню",
+  "bot_name": "Рефералки и партнёрки",
+  "welcome_text": "Привет! 👋\n\nКаталог сервисов с реферальными и партнёрскими программами: по каждой кнопке переходишь на сервис и забираешь свою ссылку.\n\nВыбирай раздел:",
+  "help_text": "Выбери раздел → открой сервис → забери свою ссылку в разделе «Пригласи друга» или «Партнёрам».\n\n/start — главное меню",
   "categories": [
     {
-      "id": "example",
-      "title": "Пример раздела",
-      "emoji": "📌",
-      "description": "Заглушка — замени на свой раздел",
+      "id": "crypto",
+      "title": "Криптовалюта",
+      "emoji": "💰",
+      "description": "Биржи: процент от торговых комиссий приглашённых",
       "items": [
-        {
-          "title": "Пример ссылки",
-          "description": "Описание вакансии или сервиса. Сюда потом вставим реферальную ссылку.",
-          "url": "https://example.com"
-        }
+        { "title": "OKX", "description": "До 60% спотовых комиссий + 10% фьючерсных, бонус $50", "url": "https://www.okx.com/" },
+        { "title": "Bybit", "description": "До 30% спот + 10% фьючерс, бонус до 10% с депозита", "url": "https://www.bybit.com/" },
+        { "title": "Bitget", "description": "До 50% спотовых комиссий + подарки в USDT", "url": "https://www.bitget.com/" },
+        { "title": "MEXC", "description": "До 70% спотовых комиссий + 10% фьючерсных", "url": "https://www.mexc.com/" },
+        { "title": "Binance", "description": "% от торговых комиссий приглашённых", "url": "https://www.binance.com/" }
+      ]
+    },
+    {
+      "id": "taxi",
+      "title": "Такси и курьеры",
+      "emoji": "🚕",
+      "description": "Бонусы за каждого приглашённого",
+      "items": [
+        { "title": "Яндекс Go", "description": "500 ₽ за друга, до 10 в месяц, другу — скидка", "url": "https://yandex.ru/go/referral" },
+        { "title": "Яндекс Драйв", "description": "200 ₽ за каждого, до 5 000 ₽ в месяц", "url": "https://drive.yandex.ru/info/about/referral?from=web_button" },
+        { "title": "Ситимобил", "description": "Бонусы вам и другу по реферальному коду", "url": "https://www.city-mobil.ru/" },
+        { "title": "Убер", "description": "Вознаграждение за привлечённого водителя", "url": "https://www.uber.com/" },
+        { "title": "Самокат (курьеры)", "description": "До 35 000 ₽ за привлечённого курьера", "url": "https://samokat.ru/" },
+        { "title": "Яндекс Еда (курьеры)", "description": "Бонус курьеру за каждого приглашённого", "url": "https://eda.yandex.ru/" }
+      ]
+    },
+    {
+      "id": "market",
+      "title": "Маркетплейсы",
+      "emoji": "🛒",
+      "description": "Продажи, блогинг и партнёрки",
+      "items": [
+        { "title": "Ozon", "description": "Ozon Блогер: % с продаж вашего контента", "url": "https://www.ozon.ru/" },
+        { "title": "Wildberries", "description": "Продвижение товаров: вознаграждение с продаж", "url": "https://www.wildberries.ru/" },
+        { "title": "AliExpress", "description": "Партнёрка: % с заказов по вашей ссылке", "url": "https://www.aliexpress.ru/" },
+        { "title": "Temu", "description": "До 20% с заказов по партнёрской ссылке", "url": "https://temu.com/" },
+        { "title": "Мегамаркет", "description": "Реферальные бонусы за друзей", "url": "https://megamarket.ru/" }
+      ]
+    },
+    {
+      "id": "edu",
+      "title": "Образование",
+      "emoji": "🎓",
+      "description": "Оплата учеников — ваши деньги",
+      "items": [
+        { "title": "Skillbox", "description": "1 000–2 000 ₽ за каждый оплаченный курс друга", "url": "https://skillbox.ru/" },
+        { "title": "Stepik", "description": "Процент от оплат ваших учеников", "url": "https://stepik.org/" },
+        { "title": "Skyeng", "description": "От 750 ₽ за каждого оплатившего ученика", "url": "https://referral.skyeng.ru/" },
+        { "title": "Нетология", "description": "Бонусы за привлечённых студентов", "url": "https://netology.ru/" }
+      ]
+    },
+    {
+      "id": "money",
+      "title": "Финансы и кэшбэк",
+      "emoji": "💳",
+      "description": "Инвестиции, заявки и кэшбэк-сервисы",
+      "items": [
+        { "title": "Т-Инвестиции", "description": "Бонусы за приглашённого инвестора", "url": "https://www.tbank.ru/investments/" },
+        { "title": "Сравни.ру", "description": "Оплата за подтверждённые заявки: кредиты, вклады", "url": "https://www.sravni.ru/" },
+        { "title": "LetyShops", "description": "От 75 ₽ за активного приглашённого", "url": "https://letyshops.ru/" }
+      ]
+    },
+    {
+      "id": "vpn",
+      "title": "VPN, eSIM и защита",
+      "emoji": "🌐",
+      "description": "Подписки и интернет-сервисы",
+      "items": [
+        { "title": "NordVPN", "description": "До 40% с первой покупки + % с продлений", "url": "https://nordvpn.com/affiliate/" },
+        { "title": "Surfshark", "description": "Бонусы обоим за приглашение друга", "url": "https://surfshark.com/" },
+        { "title": "AdGuard", "description": "Партнёрка на покупки антивируса и VPN", "url": "https://adguard.com/ru/" },
+        { "title": "Airalo", "description": "Бонусы за новых пользователей eSIM", "url": "https://www.airalo.com/" }
+      ]
+    },
+    {
+      "id": "travel",
+      "title": "Путешествия",
+      "emoji": "✈️",
+      "description": "Билеты, отели и тревел-партнёрки",
+      "items": [
+        { "title": "Aviasales", "description": "Бонусы за бронирования по вашей ссылке", "url": "https://www.aviasales.ru/" },
+        { "title": "Travelpayouts", "description": "Процент от бронирований для блогеров", "url": "https://www.travelpayouts.com/" }
+      ]
+    },
+    {
+      "id": "web",
+      "title": "Хостинг и сайты",
+      "emoji": "🏠",
+      "description": "Регулярный % с платежей клиентов",
+      "items": [
+        { "title": "Timeweb", "description": "До 40% с платежей, выплата раз в неделю, от 390 ₽", "url": "https://timeweb.com/ru/partners/webmasters/" },
+        { "title": "REG.RU", "description": "% от платежей привлечённых клиентов", "url": "https://www.reg.ru/" }
+      ]
+    },
+    {
+      "id": "fun",
+      "title": "Развлечения",
+      "emoji": "🎬",
+      "description": "Подписки и стриминг",
+      "items": [
+        { "title": "Okko", "description": "Реферальные бонусы за подписку друзей", "url": "https://okko.tv/" }
+      ]
+    },
+    {
+      "id": "traffic",
+      "title": "Партнёрские сети",
+      "emoji": "📢",
+      "description": "Для тех, кто хочет больше офферов",
+      "items": [
+        { "title": "Admitad", "description": "Тысячи рекламодателей: % от каждой продажи", "url": "https://www.admitad.com/" }
       ]
     }
   ]
