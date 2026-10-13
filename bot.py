@@ -9,6 +9,7 @@
 (без перезапуска бота).
 """
 
+import asyncio
 import json
 import logging
 import os
@@ -17,6 +18,7 @@ import threading
 from pathlib import Path
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
+from telegram.error import NetworkError, RetryAfter, TimedOut, TelegramError
 from telegram.ext import (
     Application,
     CallbackQueryHandler,
@@ -185,7 +187,18 @@ def main() -> None:
 
         threading.Timer(max_runtime, _stop).start()
 
-    app.run_polling(allowed_updates=Update.ALL_TYPES)
+    try:
+        app.run_polling(allowed_updates=Update.ALL_TYPES)
+    except (TimedOut, RetryAfter, NetworkError, RuntimeError) as exc:
+        # Ошибка характерна для принудительной остановки по таймеру:
+        # в этот момент может быть оборван long-poll запрос.
+        logger.info("Остановка бота (%s).", exc)
+        raise SystemExit(0) from None
+    except (KeyboardInterrupt, asyncio.CancelledError):
+        raise SystemExit(0) from None
+    except TelegramError:
+        logger.exception("Ошибка Telegram API при работе бота")
+        raise
 
 
 if __name__ == "__main__":
