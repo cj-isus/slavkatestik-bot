@@ -35,14 +35,26 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 CONTENT_PATH = Path(__file__).with_name("content.json")
+GUIDES_PATH = Path(__file__).with_name("guides.json")
+MEDIA_DIR = Path(__file__).with_name("media")
 
 # Хранилище контента, которое можно перезагружать на лету.
 CONTENT: dict = {}
+# Пошаговые инструкции: ключ — название сервиса (title в content.json).
+GUIDES: dict = {}
 
 
 def load_content() -> dict:
     """Читает content.json и возвращает словарь с контентом."""
     with CONTENT_PATH.open("r", encoding="utf-8") as fh:
+        return json.load(fh)
+
+
+def load_guides() -> dict:
+    """Читает guides.json (пошаговые инструкции по сервисам)."""
+    if not GUIDES_PATH.exists():
+        return {}
+    with GUIDES_PATH.open("r", encoding="utf-8") as fh:
         return json.load(fh)
 
 
@@ -72,15 +84,43 @@ def main_menu_keyboard() -> InlineKeyboardMarkup:
 
 
 def category_keyboard(index: int) -> InlineKeyboardMarkup:
-    """Кнопки-ссылки внутри категории + назад/в начало."""
+    """Кнопки-список сервисов внутри категории + назад/в начало."""
     category = get_category(index) or {}
     buttons = []
     for item_index, item in enumerate(category.get("items", [])):
         title = item.get("title", "Ссылка")
-        url = item.get("url", "https://example.com")
-        buttons.append([InlineKeyboardButton(f"➡️ {title}", url=url)])
+        buttons.append(
+            [InlineKeyboardButton(f"📖 {title}", callback_data=f"item:{index}:{item_index}")]
+        )
     buttons.append([InlineKeyboardButton("◀️ Назад", callback_data="home")])
     return InlineKeyboardMarkup(buttons)
+
+
+def item_text(category: dict, item: dict) -> str:
+    """Текст экрана сервиса: описание + пошаговая инструкция со ссылками."""
+    title = item.get("title", "Сервис")
+    header = (
+        f"{category.get('emoji', '')} <b>{title}</b>\n"
+        f"{item.get('description', '')}"
+    )
+    guide = GUIDES.get(title)
+    steps = guide.get("steps", []) if isinstance(guide, dict) else (guide or [])
+    if steps:
+        numbered = "\n".join(f"{i}. {step}" for i, step in enumerate(steps, 1))
+        header += f"\n\n<b>Как начать:</b>\n{numbered}"
+    else:
+        header += "\n\nИнструкция появится позже."
+    return header
+
+
+def item_keyboard(category_index: int, item_index: int, url: str) -> InlineKeyboardMarkup:
+    """Кнопки экрана сервиса: открыть ссылку + назад в категорию."""
+    return InlineKeyboardMarkup(
+        [
+            [InlineKeyboardButton("Открыть сервис ↗", url=url)],
+            [InlineKeyboardButton("◀️ Назад", callback_data=f"cat:{category_index}")],
+        ]
+    )
 
 
 # ------------------------------------------------------------------ хендлеры
@@ -111,8 +151,15 @@ async def cmd_reload(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None
     except (json.JSONDecodeError, OSError) as exc:
         await update.message.reply_text(f"Ошибка чтения content.json: {exc}")
         return
+    try:
+        GUIDES.clear()
+        GUIDES.update(load_guides())
+    except (json.JSONDecodeError, OSError) as exc:
+        await update.message.reply_text(f"Ошибка чтения guides.json: {exc}")
+        return
     await update.message.reply_text(
-        f"Контент перезагружен. Разделов: {len(get_categories())}."
+        f"Контент перезагружен. Разделов: {len(get_categories())}, "
+        f"инструкций: {len(GUIDES)}."
     )
 
 
@@ -132,6 +179,37 @@ async def on_button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton("◀️ Назад", callback_data="home")]]
             ),
+        )
+        return
+
+    if data.startswith("item:"):
+        try:
+            cat_index, item_index = (int(part) for part in data.split(":", 2)[1:])
+        except ValueError:
+            return
+        category = get_category(cat_index)
+        if not category:
+            return
+        items = category.get("items", [])
+        if not 0 <= item_index < len(items):
+            return
+        item = items[item_index]
+        text = item_text(category, item)
+        keyboard = item_keyboard(cat_index, item_index, item.get("url", ""))
+
+        # Скриншот инструкции: положи файл media/<название сервиса>.jpg|png
+        photo_path = MEDIA_DIR / f"{item.get('title', '')}.jpg"
+        if not photo_path.exists():
+            photo_path = MEDIA_DIR / f"{item.get('title', '')}.png"
+        if photo_path.exists():
+            with photo_path.open("rb") as fh:
+                await query.message.reply_photo(photo=fh, caption=text, parse_mode="HTML")
+            # Оставляем у последнего сообщения кнопки возврата.
+            await query.edit_message_reply_markup(reply_markup=None)
+            return
+
+        await query.edit_message_text(
+            text, parse_mode="HTML", reply_markup=keyboard
         )
         return
 
@@ -166,6 +244,7 @@ def main() -> None:
         )
 
     CONTENT.update(load_content())
+    GUIDES.update(load_guides())
 
     app = Application.builder().token(BOT_TOKEN).build()
 

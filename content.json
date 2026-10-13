@@ -13,7 +13,10 @@
         { "title": "Bybit", "description": "До 30% спот + 10% фьючерс, бонус до 10% с депозита", "url": "https://www.bybit.com/" },
         { "title": "Bitget", "description": "До 50% спотовых комиссий + подарки в USDT", "url": "https://www.bitget.com/" },
         { "title": "MEXC", "description": "До 70% спотовых комиссий + 10% фьючерсных", "url": "https://www.mexc.com/" },
-        { "title": "Binance", "description": "% от торговых комиссий приглашённых", "url": "https://www.binance.com/" }
+        { "title": "Binance", "description": "% от торговых комиссий приглашённых", "url": "https://www.binance.com/" },
+        { "title": "KuCoin", "description": "Доля с комиссий приглашённых трейдеров", "url": "https://www.kucoin.com/" },
+        { "title": "Gate.io", "description": "До 60% спотовых комиссий + кэшбэк", "url": "https://www.gate.io/" },
+        { "title": "BestChange", "description": "Партнёрка обменника: деньги за переходы", "url": "https://www.bestchange.ru/" }
       ]
     },
     {
@@ -63,7 +66,9 @@
       "items": [
         { "title": "Т-Инвестиции", "description": "Бонусы за приглашённого инвестора", "url": "https://www.tbank.ru/investments/" },
         { "title": "Сравни.ру", "description": "Оплата за подтверждённые заявки: кредиты, вклады", "url": "https://www.sravni.ru/" },
-        { "title": "LetyShops", "description": "От 75 ₽ за активного приглашённого", "url": "https://letyshops.ru/" }
+        { "title": "LetyShops", "description": "От 75 ₽ за активного приглашённого", "url": "https://letyshops.ru/" },
+        { "title": "Т-Банк", "description": "Акция «Приведи друга»: фикс-бонусы за друзей", "url": "https://www.tbank.ru/bank/help/general/bring-friend/about/" },
+        { "title": "Ozon Карта", "description": "Бонусы за подключение карты по ссылке", "url": "https://www.ozon.ru/" }
       ]
     },
     {
@@ -75,7 +80,9 @@
         { "title": "NordVPN", "description": "До 40% с первой покупки + % с продлений", "url": "https://nordvpn.com/affiliate/" },
         { "title": "Surfshark", "description": "Бонусы обоим за приглашение друга", "url": "https://surfshark.com/" },
         { "title": "AdGuard", "description": "Партнёрка на покупки антивируса и VPN", "url": "https://adguard.com/ru/" },
-        { "title": "Airalo", "description": "Бонусы за новых пользователей eSIM", "url": "https://www.airalo.com/" }
+        { "title": "Airalo", "description": "Бонусы за новых пользователей eSIM", "url": "https://www.airalo.com/" },
+        { "title": "Proton", "description": "VPN и почта: до 40% с подписок, бонусы за друга", "url": "https://proton.me/partners/affiliates" },
+        { "title": "Holafly", "description": "eSIM: до 10% с каждой покупки", "url": "https://esim.holafly.com/affiliate-program/" }
       ]
     },
     {
@@ -85,7 +92,9 @@
       "description": "Билеты, отели и тревел-партнёрки",
       "items": [
         { "title": "Aviasales", "description": "Бонусы за бронирования по вашей ссылке", "url": "https://www.aviasales.ru/" },
-        { "title": "Travelpayouts", "description": "Процент от бронирований для блогеров", "url": "https://www.travelpayouts.com/" }
+        { "title": "Travelpayouts", "description": "Процент от бронирований для блогеров", "url": "https://www.travelpayouts.com/" },
+        { "title": "Ostrovok", "description": "Отели: вознаграждение за каждое бронирование", "url": "https://www.ostrovok.ru/" },
+        { "title": "Level.Travel", "description": "Бонусы за туры и авиабилеты друзей", "url": "https://level.travel/" }
       ]
     },
     {
@@ -95,7 +104,9 @@
       "description": "Регулярный % с платежей клиентов",
       "items": [
         { "title": "Timeweb", "description": "До 40% с платежей, выплата раз в неделю, от 390 ₽", "url": "https://timeweb.com/ru/partners/webmasters/" },
-        { "title": "REG.RU", "description": "% от платежей привлечённых клиентов", "url": "https://www.reg.ru/" }
+        { "title": "REG.RU", "description": "% от платежей привлечённых клиентов", "url": "https://www.reg.ru/" },
+        { "title": "Beget", "description": "До 20% с платежей клиентов хостинга", "url": "https://beget.com/ru/partnership" },
+        { "title": "Hostinger", "description": "До 60% с продаж хостинга (глобально)", "url": "https://www.hostinger.com/affiliates" }
       ]
     },
     {
@@ -113,7 +124,33 @@
       "emoji": "📢",
       "description": "Для тех, кто хочет больше офферов",
       "items": [
-        { "title": "Admitad", "description": "Тысячи рекламодателей: % от каждой продажи", "url": "https://www.admitad.com/" }
+        { "title": "Admitad", "description": "Тысячи рекламодателей: % от каждой продажи", "url": "https://www.admitad.com/" },
+        { "title": "CityAds", "description": "CPA-сеть: выплаты за целевые действия", "url": "https://cityads.com/" },
+        { "title": "GdeSlon", "description": "CPA-сеть для блогеров и сайтов", "url": "https://www.gdeslon.ru/" }
+      ]
+    },
+    {
+      "id": "freelance",
+      "title": "Фриланс и софт",
+      "emoji": "💼",
+      "description": "Заработок на навыках и подписках",
+      "items": [
+        { "title": "Fiverr", "description": "CPA до $100 за нового покупателя", "url": "https://affiliates.fiverr.com/" },
+        { "title": "Kwork", "description": "Бонусы за приглашённых заказчиков", "url": "https://kwork.ru/" },
+        { "title": "Canva", "description": "Партнёрка на подписки Pro/Teams", "url": "https://www.canva.com/" },
+        { "title": "Grammarly", "description": "До 25% с подписок Grammarly Premium", "url": "https://www.grammarly.com/affiliates" }
+      ]
+    },
+    {
+      "id": "delivery",
+      "title": "Доставка и подписки",
+      "emoji": "📦",
+      "description": "Еда, товары, стриминг",
+      "items": [
+        { "title": "Яндекс Плюс", "description": "Бонусы за друзей в подписке", "url": "https://plus.yandex.ru/" },
+        { "title": "Кинопоиск", "description": "Реферальные коды на подписку", "url": "https://www.kinopoisk.ru/" },
+        { "title": "Магнит", "description": "Программа лояльности + бонусы за друга", "url": "https://magnit.com/" },
+        { "title": "Самокат (заказы)", "description": "Бонусы за первую доставку друга", "url": "https://samokat.ru/" }
       ]
     }
   ]
