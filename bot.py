@@ -104,9 +104,13 @@ def item_text(category: dict, item: dict) -> str:
         f"{item.get('description', '')}"
     )
     guide = GUIDES.get(title)
-    steps = guide.get("steps", []) if isinstance(guide, dict) else (guide or [])
-    if steps:
-        numbered = "\n".join(f"{i}. {step}" for i, step in enumerate(steps, 1))
+    if isinstance(guide, dict):
+        guide = guide.get("steps", [])
+    if isinstance(guide, str):
+        # Гайд — готовый HTML-текст: используем как есть.
+        header += "\n\n" + guide
+    elif guide:
+        numbered = "\n".join(f"{i}. {step}" for i, step in enumerate(guide, 1))
         header += f"\n\n<b>Как начать:</b>\n{numbered}"
     else:
         header += "\n\nИнструкция появится позже."

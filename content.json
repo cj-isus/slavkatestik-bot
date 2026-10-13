@@ -25,7 +25,7 @@
       "emoji": "🚕",
       "description": "Бонусы за каждого приглашённого",
       "items": [
-        { "title": "Яндекс Go", "description": "500 ₽ за друга, до 10 в месяц, другу — скидка", "url": "https://yandex.ru/go/referral" },
+        { "title": "Яндекс Go", "description": "Программа вознаграждений: % за поездки и бонусы за водителей", "url": "https://yandex.ru/support/taxi-distr/ru/award" },
         { "title": "Яндекс Драйв", "description": "200 ₽ за каждого, до 5 000 ₽ в месяц", "url": "https://drive.yandex.ru/info/about/referral?from=web_button" },
         { "title": "Ситимобил", "description": "Бонусы вам и другу по реферальному коду", "url": "https://www.city-mobil.ru/" },
         { "title": "Убер", "description": "Вознаграждение за привлечённого водителя", "url": "https://www.uber.com/" },
@@ -66,9 +66,9 @@
       "emoji": "💳",
       "description": "Инвестиции, заявки и кэшбэк-сервисы",
       "items": [
-        { "title": "Т-Инвестиции", "description": "Бонусы за приглашённого инвестора", "url": "https://www.tbank.ru/investments/" },
+        { "title": "Т-Инвестиции", "description": "Бонусы за приглашённого инвестора", "url": "https://www.tbank.ru/invest/promo/agent-invite/" },
         { "title": "Сравни.ру", "description": "Оплата за подтверждённые заявки: кредиты, вклады", "url": "https://www.sravni.ru/" },
-        { "title": "LetyShops", "description": "От 75 ₽ за активного приглашённого", "url": "https://letyshops.ru/" },
+        { "title": "LetyShops", "description": "От 75 ₽ за активного приглашённого", "url": "https://letyshops.com/ru" },
         { "title": "Т-Банк", "description": "Акция «Приведи друга»: фикс-бонусы за друзей", "url": "https://www.tbank.ru/bank/help/general/bring-friend/about/" },
         { "title": "Ozon Карта", "description": "Бонусы за подключение карты по ссылке", "url": "https://www.ozon.ru/" },
         { "title": "Газпромбанк", "description": "MGM: вознаграждение за каждый продукт друга", "url": "https://www.gazprombank.ru/personal/page/mgm/" },
@@ -172,7 +172,7 @@
       "items": [
         { "title": "hh.ru", "description": "Партнёрка за регистрации соискателей (Admitad)", "url": "https://www.admitad.ru/store/offers/hh/" },
         { "title": "JobGram", "description": "Кэшбэк за трудоустройство + партнёрская программа", "url": "https://www.jobgram.ru/" },
-        { "title": "Достависта (курьеры)", "description": "До 2 000 ₽ за каждого приглашённого курьера", "url": "https://dostavista.ru/couriers/referalnaya-programma-dlya-kurerov" },
+        { "title": "Достависта (курьеры)", "description": "500 ₽ за друга: 200 ₽ за 1-й и 300 ₽ за 5-й заказ", "url": "https://dostavista.ru/couriers/referalnaya-programma-dlya-kurerov" },
         { "title": "Достависта (заказы)", "description": "Бесплатная первая доставка другу по вашей ссылке", "url": "https://dostavista.ru/order-referral" }
       ]
     },
