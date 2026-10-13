@@ -43,7 +43,9 @@
         { "title": "Wildberries", "description": "Продвижение товаров: вознаграждение с продаж", "url": "https://www.wildberries.ru/" },
         { "title": "AliExpress", "description": "Партнёрка: % с заказов по вашей ссылке", "url": "https://www.aliexpress.ru/" },
         { "title": "Temu", "description": "До 20% с заказов по партнёрской ссылке", "url": "https://temu.com/" },
-        { "title": "Мегамаркет", "description": "Реферальные бонусы за друзей", "url": "https://megamarket.ru/" }
+        { "title": "Мегамаркет", "description": "Реферальные бонусы за друзей", "url": "https://megamarket.ru/" },
+        { "title": "Яндекс Маркет", "description": "Реферальная программа: % с покупок друзей", "url": "https://affiliate.market.yandex.ru/" },
+        { "title": "Wibes (WB)", "description": "Монетизация видео: доход с рекламы в своих роликах", "url": "https://seller.wildberries.ru/instructions/ru/ru/material/wibes-platform" }
       ]
     },
     {
@@ -68,7 +70,10 @@
         { "title": "Сравни.ру", "description": "Оплата за подтверждённые заявки: кредиты, вклады", "url": "https://www.sravni.ru/" },
         { "title": "LetyShops", "description": "От 75 ₽ за активного приглашённого", "url": "https://letyshops.ru/" },
         { "title": "Т-Банк", "description": "Акция «Приведи друга»: фикс-бонусы за друзей", "url": "https://www.tbank.ru/bank/help/general/bring-friend/about/" },
-        { "title": "Ozon Карта", "description": "Бонусы за подключение карты по ссылке", "url": "https://www.ozon.ru/" }
+        { "title": "Ozon Карта", "description": "Бонусы за подключение карты по ссылке", "url": "https://www.ozon.ru/" },
+        { "title": "Газпромбанк", "description": "MGM: вознаграждение за каждый продукт друга", "url": "https://www.gazprombank.ru/personal/page/mgm/" },
+        { "title": "ВТБ", "description": "«Приведи друга»: бонусы за карту и продукты", "url": "https://www.vtb.ru/personal/friends/" },
+        { "title": "Альфа-Банк", "description": "«Приведи друга»: до 500 ₽ и проценты", "url": "https://alfabank.ru/lp/retail/friends/" }
       ]
     },
     {
@@ -106,7 +111,9 @@
         { "title": "Timeweb", "description": "До 40% с платежей, выплата раз в неделю, от 390 ₽", "url": "https://timeweb.com/ru/partners/webmasters/" },
         { "title": "REG.RU", "description": "% от платежей привлечённых клиентов", "url": "https://www.reg.ru/" },
         { "title": "Beget", "description": "До 20% с платежей клиентов хостинга", "url": "https://beget.com/ru/partnership" },
-        { "title": "Hostinger", "description": "До 60% с продаж хостинга (глобально)", "url": "https://www.hostinger.com/affiliates" }
+        { "title": "Hostinger", "description": "До 60% с продаж хостинга (глобально)", "url": "https://www.hostinger.com/affiliates" },
+        { "title": "Яндекс Облако", "description": "Партнёрство: % с расходов привлечённых клиентов", "url": "https://yandex.cloud/ru/partners" },
+        { "title": "Selectel", "description": "Партнёрская программа на облачные сервисы", "url": "https://selectel.ru/about/partners-programm/" }
       ]
     },
     {
@@ -115,7 +122,11 @@
       "emoji": "🎬",
       "description": "Подписки и стриминг",
       "items": [
-        { "title": "Okko", "description": "Реферальные бонусы за подписку друзей", "url": "https://okko.tv/" }
+        { "title": "Okko", "description": "Реферальные бонусы за подписку друзей", "url": "https://okko.tv/" },
+        { "title": "START", "description": "Партнёрка: платные триалы и подписки (~50 ₽/шт)", "url": "https://www.admitad.ru/store/offers/onlain-kinoteatr-start/" },
+        { "title": "Kion", "description": "Партнёрка на подписки онлайн-кинотеатра", "url": "https://www.admitad.ru/store/offers/kion-ru/" },
+        { "title": "Иви", "description": "Партнёрка CPS на подписки и покупки", "url": "https://www.admitad.ru/store/offers/ivi-cps/" },
+        { "title": "ЛитРес", "description": "Партнёрка на книги и аудиокниги", "url": "https://www.litres.ru/company/partners/" }
       ]
     },
     {
@@ -151,6 +162,28 @@
         { "title": "Кинопоиск", "description": "Реферальные коды на подписку", "url": "https://www.kinopoisk.ru/" },
         { "title": "Магнит", "description": "Программа лояльности + бонусы за друга", "url": "https://magnit.com/" },
         { "title": "Самокат (заказы)", "description": "Бонусы за первую доставку друга", "url": "https://samokat.ru/" }
+      ]
+    },
+    {
+      "id": "work",
+      "title": "Работа и подработка",
+      "emoji": "👔",
+      "description": "Вакансии, курьерство, трудоустройство",
+      "items": [
+        { "title": "hh.ru", "description": "Партнёрка за регистрации соискателей (Admitad)", "url": "https://www.admitad.ru/store/offers/hh/" },
+        { "title": "JobGram", "description": "Кэшбэк за трудоустройство + партнёрская программа", "url": "https://www.jobgram.ru/" },
+        { "title": "Достависта (курьеры)", "description": "До 2 000 ₽ за каждого приглашённого курьера", "url": "https://dostavista.ru/couriers/referalnaya-programma-dlya-kurerov" },
+        { "title": "Достависта (заказы)", "description": "Бесплатная первая доставка другу по вашей ссылке", "url": "https://dostavista.ru/order-referral" }
+      ]
+    },
+    {
+      "id": "health",
+      "title": "Здоровье и аптеки",
+      "emoji": "💊",
+      "description": "Аптеки онлайн, бонусы за покупки",
+      "items": [
+        { "title": "Здравсити", "description": "Партнёрка на заказы лекарств и витаминов", "url": "https://zdravcity.ru/partners/" },
+        { "title": "Ютека", "description": "Реферальная программа аптечного маркетплейса", "url": "https://uteka.ru/referral-program/" }
       ]
     }
   ]
